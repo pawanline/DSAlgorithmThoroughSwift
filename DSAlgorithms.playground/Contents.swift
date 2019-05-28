@@ -6,8 +6,6 @@ class DSAlgorithms {
     
     private let created = Date()
     
-    
-    
     func executionDuration() {
         let diff = Date().timeIntervalSince(created)
         print("alogrithm takes \(diff) seconds")
@@ -48,10 +46,7 @@ class DSAlgorithms {
         }
         
     }
-
-    
-    
-    
+ 
     private init () {
         
     }
