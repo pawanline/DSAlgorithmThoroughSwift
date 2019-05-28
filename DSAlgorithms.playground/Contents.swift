@@ -48,6 +48,30 @@ class DSAlgorithms {
         }
         
     }
+    
+    
+    
+   
+    // left shifting
+    func leftShifting( arr: inout [Int],movement: Int) {
+        print("initial array is \(arr)")
+        for i in 0..<movement {
+            print("i is \(i)")
+             print("arr is \(arr[i])")
+            print("last element is \(arr[arr.count - i - 1])")
+            let temp = arr[i]
+            arr[i] = arr[arr.count - i - 1]
+            arr[arr.count - i - 1] = temp
+            
+            print("array after first sorting \(arr)")
+        }
+       
+    }
+    
+    
+    
+    
+   
 
     
     
@@ -72,3 +96,9 @@ DSAlgorithms.default.executionStart()
 DSAlgorithms.default.countTheCharacterUsingReduce("India is great country", letter: "a")
 
 DSAlgorithms.default.executionDuration()
+ var arr = [1,2,3,4,5,6]
+
+print(DSAlgorithms.default.leftShifting(arr: &arr, movement: 3))
+
+
+print(" left shifting \(arr)")
