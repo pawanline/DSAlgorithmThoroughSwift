@@ -66,6 +66,23 @@ class DSAlgorithms {
        
     }
     
+    //MARK: - Dictionary Logic :
+    // Program to find get occurence of each element : easy way
+    func getOccurences(arr: [Int]) -> [Int:Int] {
+        var occurenceDict = [Int:Int]()
+        for a in arr {
+            if let idx = occurenceDict.index(forKey: a) {
+                print("index is \(idx)")
+                let value = (occurenceDict[idx]).value
+                occurenceDict.updateValue(value + 1, forKey: a)
+            } else {
+                occurenceDict.updateValue(1, forKey: a)
+            }
+            
+        }
+        return occurenceDict
+    }
+    
     
     
     
@@ -100,3 +117,5 @@ print(DSAlgorithms.default.leftShifting(arr: &arr, movement: 3))
 
 
 print(" left shifting \(arr)")
+
+print("dictionary value : \(DSAlgorithms.default.getOccurences(arr: [1,1,2,3,4,5,12,3,4,3,1,2,3]))")
